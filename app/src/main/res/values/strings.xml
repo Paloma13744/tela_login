@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">login</string>
+
+    <string name="titulo">
+    <b><font color="#555555">Medi</font></b><b><font color="#2dbed1">Lab</font></b>
+    </string>
+
+    <string name="infotitulo">
+        Appoint Your Doctor Easily
+    </string>
+
+    <string name="email">
+        Email Address
+    </string>
+
+    <string name="password">
+      Password
+    </string>
+
+    <string name="remember">
+      Remember me and keep me logged in
+    </string>
+
+
+    <string name="sign_in">
+    <b>Sign In</b>
+    </string>
+
+
+
+
+
+</resources>

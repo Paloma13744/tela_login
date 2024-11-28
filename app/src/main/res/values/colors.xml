@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="blackground">#FFFFFFFF</color>
+    <color name="main">#2dbed1</color>
+    <color name="blue">#004aad</color>
+    <color name="cinza">#555555</color>
+    <color name="cinzaclaro">#999999</color>
+
+
+
+
+</resources>
