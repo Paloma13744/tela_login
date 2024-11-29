@@ -26,6 +26,17 @@
     <b>Sign In</b>
     </string>
 
+    <string name="acessar_com">
+        <b>Or Login with</b>
+    </string>
+
+
+    <string name="google">
+        <b>Google</b>
+    </string>
+
+
+
 
 
 

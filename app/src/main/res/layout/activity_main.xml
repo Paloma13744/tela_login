@@ -14,11 +14,11 @@
         android:layout_height="150dp"
         android:scaleType="centerCrop"
         android:src="@drawable/fundo_login"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Logo -->
+
     <ImageView
         android:id="@+id/logoImage"
         android:layout_width="120dp"
@@ -26,12 +26,11 @@
         android:src="@drawable/logo_login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.135" />
+        app:layout_constraintVertical_bias="0.072" />
 
-    <!-- Título -->
     <TextView
         android:id="@+id/label"
         android:layout_width="wrap_content"
@@ -39,7 +38,7 @@
         android:layout_marginTop="7dp"
         android:fontFamily="@font/poppins_medium"
         android:text="@string/titulo"
-        android:textSize="20sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logoImage" />
@@ -49,90 +48,98 @@
         android:id="@+id/label2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/infotitulo"
+        android:layout_marginTop="7dp"
         android:fontFamily="@font/poppins_medium"
+        android:text="@string/infotitulo"
         android:textColor="@color/cinza"
         android:textSize="15sp"
-        app:layout_constraintTop_toBottomOf="@id/label"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="7dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label" />
 
     <!-- Email -->
     <TextView
         android:id="@+id/label3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/email"
-        android:fontFamily="@font/poppins_medium"
-        android:textColor="@color/cinza"
-        android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@id/label2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="14dp"
         android:layout_marginStart="16dp"
-        app:layout_constraintHorizontal_bias="0.0" />
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/email"
+        android:textColor="@color/cinza"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label2" />
 
-    <!-- Campo de entrada de username -->
+    <!-- Campo de entrada de usuário -->
     <EditText
         android:id="@+id/username"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:text=""
-        android:padding="16dp"
-        android:background="@drawable/edittext_background"
-        app:layout_constraintTop_toBottomOf="@id/label3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp" />
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edittext_background"
+        android:fontFamily="@font/poppins_medium"
+        android:hint="Digite o seu email"
+        android:inputType="text"
+        android:padding="16dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label3"
+
+        />
 
     <!-- Senha -->
     <TextView
         android:id="@+id/label4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/password"
-        android:fontFamily="@font/poppins_medium"
-        android:textColor="@color/cinza"
-        android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@id/username"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="14dp"
         android:layout_marginStart="16dp"
-        app:layout_constraintHorizontal_bias="0.0" />
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/password"
+        android:textColor="@color/cinza"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/username" />
+
 
     <!-- Campo de entrada de password -->
     <EditText
         android:id="@+id/password"
-        android:layout_width="0dp"
-        android:text=""
-        android:layout_height="50dp"
-        android:padding="16dp"
-        android:background="@drawable/edittext_background"
-        android:inputType="textPassword"
-        app:layout_constraintTop_toBottomOf="@id/label4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp" />
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edittext_background"
+        android:fontFamily="@font/poppins_medium"
+        android:hint="Digite a sua senha"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label4" />
 
     <!-- Lembre-me -->
     <CheckBox
         android:id="@+id/rememberMe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_medium"
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
-        android:textSize="13sp"
+        android:fontFamily="@font/poppins_medium"
         android:text="@string/remember"
         android:textColor="@color/cinza"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -140,6 +147,81 @@
 
 
     <!-- Botão de login -->
+    <Button
+        android:id="@+id/signin_btn"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="12dp"
+        android:backgroundTint="@color/main"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/sign_in"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rememberMe" />
+
+
+    <!-- acessar email -->
+
+
+    <TextView
+        android:id="@+id/label5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="@string/acessar_com"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signin_btn" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutFacebookGoogle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/label5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+    <Button
+        android:id="@+id/facebookButton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:text="Facebook"
+        android:drawableStart="@drawable/facebook"
+        android:backgroundTint="@color/blue"
+        android:textColor="@android:color/white"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:drawablePadding="8dp" />
+
+    <View android:layout_width="8dp" android:layout_height="0dp" />
+
+    <Button
+        android:id="@+id/googleButton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:text="@string/google"
+        android:drawableStart="@drawable/google"
+        android:backgroundTint="@color/blackground"
+        android:textColor="@color/main"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:drawablePadding="8dp" />
+</LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
