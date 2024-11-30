@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
+    <!-- Imagem de logo -->
     <ImageView
         android:id="@+id/logoImage"
         android:layout_width="120dp"
@@ -31,6 +31,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.072" />
 
+    <!-- Titulo principal -->
     <TextView
         android:id="@+id/label"
         android:layout_width="wrap_content"
@@ -43,7 +44,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logoImage" />
 
-    <!-- Subtítulo -->
+    <!-- Subtitulo -->
     <TextView
         android:id="@+id/label2"
         android:layout_width="wrap_content"
@@ -57,7 +58,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/label" />
 
-    <!-- Email -->
+
     <TextView
         android:id="@+id/label3"
         android:layout_width="wrap_content"
@@ -73,7 +74,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/label2" />
 
-    <!-- Campo de entrada de usuário -->
+    <!-- Campo de email -->
     <EditText
         android:id="@+id/username"
         android:layout_width="match_parent"
@@ -93,7 +94,7 @@
 
         />
 
-    <!-- Senha -->
+
     <TextView
         android:id="@+id/label4"
         android:layout_width="wrap_content"
@@ -110,6 +111,7 @@
         app:layout_constraintTop_toBottomOf="@id/username" />
 
 
+    <!-- Campo para a senha-->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordLayout"
         android:layout_width="match_parent"
@@ -128,7 +130,7 @@
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/edittext_background"
+            android:background="@color/blackground"
             android:fontFamily="@font/poppins_medium"
             android:inputType="textPassword"
             android:padding="16dp"
@@ -136,7 +138,8 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-       <CheckBox
+    <!-- Lembre-se -->
+    <CheckBox
         android:id="@+id/rememberMe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -156,34 +159,32 @@
     <Button
         android:id="@+id/signin_btn"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="65dp"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="12dp"
         android:backgroundTint="@color/main"
         android:fontFamily="@font/poppins_medium"
-        android:textColor="@color/white"
         android:paddingTop="10dp"
         android:paddingBottom="5dp"
         android:text="@string/sign_in"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
         app:cornerRadius="0dp"
-        android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/rememberMe" />
 
-
-    <!-- acessar email -->
 
 
     <TextView
         android:id="@+id/label5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/acessar_com"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/poppins_medium"
+        android:text="@string/acessar_com"
         android:textColor="@color/cinzaescuro"
         android:textSize="15sp"
         android:textStyle="bold"
@@ -196,64 +197,65 @@
         android:id="@+id/linearLayoutFacebookGoogle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/label5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="16dp"
-        android:weightSum="2">
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label5">
 
         <Button
             android:id="@+id/facebookButton"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
+            android:background="@drawable/buttonfacebook"
+            android:drawableStart="@drawable/facebook"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:padding="10dp"
             android:text="@string/facebook"
             android:textAllCaps="false"
-            android:drawableStart="@drawable/facebook"
-            android:background="@drawable/buttonfacebook"
             android:textColor="@color/blue"
-            android:fontFamily="@font/poppins_medium"
-            android:padding="10dp"
-            android:gravity="center"
-            android:drawablePadding="8dp"
             android:textSize="17sp" />
 
         <View
             android:layout_width="30dp"
-            android:layout_height="match_parent" />  <!-- Ajuste de altura para ocupar todo o espaço disponível -->
+            android:layout_height="match_parent" />
 
         <Button
             android:id="@+id/Google"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
+            android:background="@drawable/buttongoogle"
+            android:drawableStart="@drawable/google"
+            android:drawablePadding="8dp"
             android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:padding="10dp"
             android:text="@string/google"
             android:textAllCaps="false"
-            android:drawableStart="@drawable/google"
-            android:background="@drawable/buttongoogle"
             android:textColor="@color/main"
-            android:padding="10dp"
-            android:gravity="center"
-            android:drawablePadding="8dp"
             android:textSize="17sp" />
 
     </LinearLayout>
 
+    <!-- label : Não possui acesso a conta -->
     <TextView
         android:id="@+id/label6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/poppins_medium"
         android:text="@string/sign_up"
         android:textColor="@color/cinzaescuro"
-        android:fontFamily="@font/poppins_medium"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearLayoutFacebookGoogle" />
 

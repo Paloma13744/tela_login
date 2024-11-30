@@ -2,7 +2,7 @@
     <string name="app_name">login</string>
 
     <string name="titulo">
-    MediLab
+    <b><font color="#555555">Medi</font></b><b><font color="#2dbed1">Lab</font></b>
     </string>
 
     <string name="infotitulo">
@@ -41,9 +41,8 @@
 
 
     <string name="sign_up">
-    Don\'t have an account? Sign Up
+    <font color="#555555">Don\'t have an account? </font><b><font color="#2dbed1"> Sign Up</font></b>
     </string>
-
 
 
 
