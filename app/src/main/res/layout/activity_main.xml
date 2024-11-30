@@ -110,44 +110,49 @@
         app:layout_constraintTop_toBottomOf="@id/username" />
 
 
-    <!-- Campo de entrada de password -->
-    <EditText
-        android:id="@+id/password"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/edittext_background"
-        android:fontFamily="@font/poppins_medium"
         android:hint="Digite a sua senha"
-        android:inputType="textPassword"
-        android:padding="16dp"
-        android:textSize="14sp"
+        app:endIconContentDescription="Mostrar/Esconder senha"
+        app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/label4" />
+        app:layout_constraintTop_toBottomOf="@id/label4">
 
-    <!-- Lembre-me -->
-    <CheckBox
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:fontFamily="@font/poppins_medium"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+       <CheckBox
         android:id="@+id/rememberMe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/poppins_medium"
+        android:padding="12dp"
         android:text="@string/remember"
         android:textColor="@color/cinza"
-        android:textSize="15sp"
-        android:padding="12dp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/password" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordLayout" />
 
-
-    <!-- Botão de login -->
     <Button
         android:id="@+id/signin_btn"
         android:layout_width="match_parent"
@@ -176,10 +181,11 @@
         android:id="@+id/label5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="10dp"
         android:text="@string/acessar_com"
+        android:fontFamily="@font/poppins_medium"
         android:textColor="@color/cinzaescuro"
-        android:textSize="17sp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -241,10 +247,11 @@
         android:id="@+id/label6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:text="@string/sign_up"
         android:textColor="@color/cinzaescuro"
-        android:textSize="17sp"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
